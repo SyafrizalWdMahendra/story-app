@@ -9,3 +9,15 @@ self.addEventListener("push", (event) => {
 
   event.waitUntil(chainPromise());
 });
+
+self.addEventListener("fetch", (event) => {
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      caches.match(event.request).then((response) => {
+        return (
+          response || caches.match("./index.html") 
+        );
+      })
+    );
+  }
+});
