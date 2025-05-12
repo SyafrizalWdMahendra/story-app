@@ -85,10 +85,6 @@ export default class StoryListPresenter {
       this._totalPages = Math.ceil(response.total / this._pageSize) || 1;
 
       this._view.renderStories(this._stories);
-      this._view.updatePaginationControls({
-        currentPage: this._currentPage,
-        totalPages: this._totalPages,
-      });
     } catch (error) {
       console.error("Error loading stories:", error);
       this._view.showError(error.message);
