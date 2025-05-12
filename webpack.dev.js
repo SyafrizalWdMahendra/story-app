@@ -26,25 +26,7 @@ module.exports = merge(common, {
 
   plugins: [
     new GenerateSW({
-      clientsClaim: true,
-      skipWaiting: true,
-      runtimeCaching: [
-        {
-          urlPattern: /\.(?:html|js|css|json)$/,
-          handler: "StaleWhileRevalidate",
-        },
-        {
-          urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/,
-          handler: "CacheFirst",
-          options: {
-            cacheName: "images",
-            expiration: {
-              maxEntries: 20,
-              maxAgeSeconds: 30 * 24 * 60 * 60, // 30 hari
-            },
-          },
-        },
-      ],
+      swDest: "sw.bundle.js",
     }),
   ],
 });
