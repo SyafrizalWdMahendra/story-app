@@ -15,19 +15,19 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/resource",
+        type: "./asset/resource",
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src/index.html"),
+      template: path.resolve(__dirname, "./src/index.html"),
       // excludeChunks: ["sw"],
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/public/"),
+          from: path.resolve(__dirname, "./src/public/"),
           to: path.resolve(__dirname, "docs/"),
         },
       ],
