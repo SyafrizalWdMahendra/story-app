@@ -49,7 +49,7 @@ export default class StoryPage {
                       <input type="hidden" id="longitude" name="longitude">
                   </div>
                   
-                  <button type="submit" id="submitBtn" class="btn-submit">Submit</button>
+                  <button type="submit" id="submitBtn" class="btn-submit">Submit & Save to Local</button>
               </form>
               <div id="message" class="message"></div>
           </div>

@@ -1,6 +1,6 @@
 # App Starter Project with Webpack
 
-Proyek ini adalah setup dasar untuk aplikasi web yang menggunakan webpack untuk proses bundling, Babel untuk transpile JavaScript, serta mendukung proses build dan serving aplikasi.
+Proyek ini adalah tugas akhir dari kelas belajar pemrograman web intermediate, didalamnya pengguna dapat menambah, melihat daftar cerita dari orang lain, melihat cerita yang tersimpan serta menghapus cerita.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Proyek ini adalah setup dasar untuk aplikasi web yang menggunakan webpack untuk 
 
 ### Installation
 
-1. Download starter project [di sini](https://raw.githubusercontent.com/dicodingacademy/a219-web-intermediate-labs/099-shared-files/starter-project-with-webpack.zip).
+1. Download starter project [di sini](https://github.com/SyafrizalWdMahendra/story-app.git).
 2. Lakukan unzip file.
 3. Pasang seluruh dependencies dengan perintah berikut.
    ```shell
