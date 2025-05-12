@@ -23,7 +23,7 @@ export async function registerServiceWorker() {
 
   try {
     const registration = await navigator.serviceWorker.register(
-      "/docs/sw.bundle.js"
+      "./sw.bundle.js"
     );
     console.log("Service worker telah terpasang", registration);
   } catch (error) {

@@ -12,9 +12,9 @@ export default class HomePage {
           </div>
         </div>
         <div class="card-fan-container">
-          <img src="/docs/images/img1.jpg" alt="Title Image" class="fan-card fan-card-1" />
-          <img src="/docs/images/img2.jpg" alt="Title Image" class="fan-card fan-card-2" />
-          <img src="/docs/images/img3.jpg" alt="Title Image" class="fan-card fan-card-3" />
+          <img src="./images/img1.jpg" alt="Title Image" class="fan-card fan-card-1" />
+          <img src="./images/img2.jpg" alt="Title Image" class="fan-card fan-card-2" />
+          <img src="./images/img3.jpg" alt="Title Image" class="fan-card fan-card-3" />
         </div>
       </div>
         
