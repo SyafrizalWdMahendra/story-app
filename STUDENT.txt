@@ -1,2 +1,1 @@
-APP_URL=<url_aplikasi>
-MAP_SERVICE_API_KEY=<api_key>
+APP_URL=https://syafrizalwdmahendra.github.io/story-app/

@@ -1,4 +1,5 @@
 import { getAllStoriesFromDB, deleteStoryFromDB } from "../../data/database.js";
+
 export default class StoryArchivePresenter {
   constructor(view) {
     this._view = view;

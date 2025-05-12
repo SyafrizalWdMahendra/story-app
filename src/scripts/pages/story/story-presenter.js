@@ -211,10 +211,9 @@ export default class StoryPresenter {
         formData.append("photo", photoBlob);
       }
 
-      // Simpan ke IndexedDB
       const db = await dbPromise;
       const story = {
-        id: `story-${Date.now()}`, // key unik
+        id: `story-${Date.now()}`,
         description,
         lat: parseFloat(latitude),
         lon: parseFloat(longitude),
@@ -223,7 +222,22 @@ export default class StoryPresenter {
       };
       await db.add("stories", story);
 
-      // Submit ke server
+      if (!navigator.onLine) {
+        if ("Notification" in window && Notification.permission === "granted") {
+          new Notification("📷 Cerita berhasil ditambahkan secara offline", {
+            body: "Cerita akan dikirim saat koneksi tersedia.",
+            icon: "./images/logo.png",
+          });
+        } else {
+          alert(
+            "Cerita berhasil disimpan secara offline. Akan dikirim saat online."
+          );
+        }
+
+        this.resetCamera();
+        return;
+      }
+
       const response = await this._apiModel.submitStory(formData);
 
       this.#notifyToAllUser();

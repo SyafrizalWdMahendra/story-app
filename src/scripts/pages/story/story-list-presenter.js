@@ -6,7 +6,7 @@ export default class StoryListPresenter {
     this._apiModel = new StoryApiModel();
     this._currentPage = 1;
     this._pageSize = 10;
-    this._includeLocation = false; 
+    this._includeLocation = false;
     this._stories = [];
     this._totalPages = 1;
   }

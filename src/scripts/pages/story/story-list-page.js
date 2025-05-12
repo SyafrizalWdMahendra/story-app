@@ -80,7 +80,7 @@ export default class StoryListPage {
   }
 
   _initMap() {
-    this._map = L.map("storyMap").setView([-2.5489, 118.0149], 5); 
+    this._map = L.map("storyMap").setView([-2.5489, 118.0149], 5);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
