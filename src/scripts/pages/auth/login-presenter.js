@@ -13,19 +13,6 @@ export default class LoginPresenter {
       return;
     }
 
-    if (!this.model.validateEmail(email)) {
-      this.view.showMessage("Please enter a valid email address", "red");
-      return;
-    }
-
-    if (!this.model.validatePassword(password)) {
-      this.view.showMessage(
-        "Password must contain at least 8 characters, one letter, and one number",
-        "red"
-      );
-      return;
-    }
-
     try {
       const data = await this.model.login(email, password);
 

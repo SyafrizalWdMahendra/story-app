@@ -57,23 +57,23 @@ export default class AuthModel {
     return data; 
   }
 
-  /**
-   * Validate email format
-   * @param {string} email
-   * @returns {boolean}
-   */
-  validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  }
+  // /**
+  //  * Validate email format
+  //  * @param {string} email
+  //  * @returns {boolean}
+  //  */
+  // validateEmail(email) {
+  //   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   return re.test(email);
+  // }
 
-  /**
-   * Validate password strength
-   * @param {string} password
-   * @returns {boolean}
-   */
-  validatePassword(password) {
-    const re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    return re.test(password);
-  }
+  // /**
+  //  * Validate password strength
+  //  * @param {string} password
+  //  * @returns {boolean}
+  //  */
+  // validatePassword(password) {
+  //   const re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+  //   return re.test(password);
+  // }
 }
