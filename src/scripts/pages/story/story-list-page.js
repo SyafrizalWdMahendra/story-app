@@ -93,27 +93,31 @@ export default class StoryListPage {
     container.innerHTML = stories
       .map(
         (story) => `
-        <div class="story-card" data-id="${story.id}">
-          <img src="${story.photoUrl}" alt="Story image" class="story-image">
-          <div class="story-content">
-            <h3>${story.name || "Anonymous"}</h3>
-            <p class="story-description">${story.description}</p>
-            <div class="story-meta">
-              <small class="story-date">📅 ${new Date(
-                story.createdAt
-              ).toLocaleString()}</small>
-              ${
-                story.location
-                  ? `<small class="story-location">📍 ${story.location}</small>`
-                  : ""
-              }
-            </div>
+      <div class="story-card" data-id="${story.id}">
+        <img src="${story.photoUrl}" alt="Story image" class="story-image">
+        <div class="story-content">
+          <h3>${story.name || "Anonymous"}</h3>
+          <p class="story-description">${story.description}</p>
+          <div class="story-meta">
+            <small class="story-date">📅 ${new Date(
+              story.createdAt
+            ).toLocaleString()}</small>
+            ${
+              story.location
+                ? `<small class="story-location">📍 ${story.location}</small>`
+                : ""
+            }
           </div>
+          <button class="btn-add-favorite" data-id="${
+            story.id
+          }">💾 Add to Favorite</button>
         </div>
-      `
+      </div>
+    `
       )
       .join("");
 
+    this.presenter._bindFavoriteButtons(stories); // Bind event after DOM rendered
     this._updateStoryMap(stories);
   }
 

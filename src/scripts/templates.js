@@ -37,7 +37,7 @@ export function generateAuthenticatedNavigationListTemplate(isSubscribed) {
       <li><a href="#/" class="nav-link">Beranda</a></li>
       <li><a href="#/story" class="nav-link">Create Story</a></li>
       <li><a href="#/list-story" class="nav-link">List Story</a></li>
-      <li><a href="#/story-archive" class="nav-link">Story Archive</a></li>
+      <li><a href="#/story-favorite" class="nav-link">Story Favorite</a></li>
       <li><a href="#/about" class="nav-link">About</a></li>
       <li><a href="#/logout" class="nav-link">Logout</a></li>
       <li>
@@ -72,7 +72,7 @@ export function generateUnauthenticatedNavigationListTemplate() {
       <li><a href="#/" class="nav-link" data-route="/">Beranda</a></li>
       <li><a href="#/story" class="nav-link" data-route="/story">Create Story</a></li>
       <li><a href="#/list-story" class="nav-link" data-route="/list-story">List Story</a></li>
-      <li><a href="#/story-archive" class="nav-link" data-route="/story-archive">Story Archive</a></li>
+      <li><a href="#/story-favorite" class="nav-link" data-route="/story-favorite">Story Favorite</a></li>
       <li><a href="#/about" class="nav-link" data-route="/about">About</a></li>
       <li><a href="#/login" class="nav-link" id="loginLink" data-route="/login">Login</a></li>
       <li><a href="#/register" class="nav-link" id="registerLink" data-route="/register">Register</a></li>

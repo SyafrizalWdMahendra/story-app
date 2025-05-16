@@ -1,4 +1,5 @@
 import StoryApiModel from "../../data/page-model.js";
+import { saveStoryToFavorites } from "../../data/database.js";
 
 export default class StoryListPresenter {
   constructor(view) {
@@ -123,5 +124,23 @@ export default class StoryListPresenter {
     if (includeLocation) {
       this._view.scrollToMap();
     }
+  }
+
+  async _bindFavoriteButtons(stories) {
+    const buttons = document.querySelectorAll(".btn-add-favorite");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", async (e) => {
+        const storyId = e.target.dataset.id;
+        const story = stories.find((s) => s.id === storyId);
+
+        try {
+          await saveStoryToFavorites(story);
+          alert("📌 Cerita berhasil ditambahkan ke favorit!");
+        } catch (error) {
+          console.error("Failed to save favorite:", error);
+          alert("❌ Gagal menyimpan cerita ke favorit.");
+        }
+      });
+    });
   }
 }

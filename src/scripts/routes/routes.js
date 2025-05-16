@@ -27,7 +27,7 @@ const routes = {
     page: () => new StoryListPage(),
     needAuth: true,
   },
-  "/story-archive": {
+  "/story-favorite": {
     page: () => new StoryArchivePage(),
     needAuth: true,
   },

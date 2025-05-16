@@ -105,14 +105,12 @@ export async function unsubscribe() {
       return;
     }
 
-    // Unsubscribe dari browser terlebih dahulu
     const unsubscribed = await pushSubscription.unsubscribe();
     if (!unsubscribed) {
       alert(failureUnsubscribeMessage);
       return;
     }
 
-    // Setelah berhasil unsubscribe lokal, laporkan ke server
     const { endpoint } = pushSubscription.toJSON();
     const response = await unsubscribePushNotification({ endpoint });
 

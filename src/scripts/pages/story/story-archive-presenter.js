@@ -65,10 +65,6 @@ export default class StoryArchivePresenter {
       this._stories = allStories.slice(start, end);
 
       this._view.renderStories(this._stories);
-      this._view.updatePaginationControls({
-        currentPage: this._currentPage,
-        totalPages: this._totalPages,
-      });
     } catch (error) {
       console.error("Failed to load stories from IndexedDB:", error);
       this._view.showError("Failed to load local stories.");

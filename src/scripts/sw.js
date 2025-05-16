@@ -61,14 +61,14 @@ registerRoute(
 // ========================
 // Cache API responses
 registerRoute(
-  ({ url }) => url.origin === BASE_URL,
-  new NetworkFirst({
-    cacheName: "api-cache",
+  ({ url }) => url.href.startsWith(BASE_URL + "/stories"),
+  new StaleWhileRevalidate({
+    cacheName: "stories-cache",
     plugins: [
       new CacheableResponsePlugin({ statuses: [0, 200] }),
       new ExpirationPlugin({
-        maxEntries: 30,
-        maxAgeSeconds: 5 * 60, // 5 minutes
+        maxEntries: 50,
+        maxAgeSeconds: 60 * 60, // 1 hour
       }),
     ],
   })
